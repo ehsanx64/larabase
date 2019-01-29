@@ -21,6 +21,11 @@ Route::get('/hello', function () {
             'methods' => [
                 'new', 'edit', 'remove', 'index'
             ]
-        ]
+        ],
+		'about' => [
+			'methods' => [
+				'view'
+			]
+		]
     ]);
 });
