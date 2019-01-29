@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hello', function () {
+    return json_encode([
+        'post' => [
+            'methods' => [
+                'new', 'edit', 'remove', 'index'
+            ]
+        ]
+    ]);
+});
