@@ -24,6 +24,15 @@ Route::get('/about', function () {
 	]);
 });
 
+Route::get('/page/{id}', function () {
+	return json_encode([
+			'result' => true,
+			'data' => [
+					'pageContent' => 'Hello there'
+			]
+	]);
+});
+
 Route::get('/hello', function () {
 	$appUrl = config('app.url') . '/';
 
@@ -33,17 +42,20 @@ Route::get('/hello', function () {
 			'home' => [
 				'url' => $appUrl,
 				'title' => 'Home',
-				'path' => '/'
+				'path' => '/',
+				'contentUrl' => $appUrl . 'page/home'
 			],
 			'post' => [
 				'url' => $appUrl . 'post',
 				'title' => 'Posts',
-				'path' => '/post'
+				'path' => '/post',
+				'contentUrl' => $appUrl . 'page/post'
 			],
 			'about' => [
 				'url' => $appUrl . 'about',
 				'title' => 'About',
-				'path' => '/about'
+				'path' => '/about',
+				'contentUrl' => $appUrl . 'page/about'
 			]
 		],
     ]);
