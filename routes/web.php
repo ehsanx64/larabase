@@ -24,12 +24,12 @@ Route::get('/about', function () {
 	]);
 });
 
-Route::get('/page/{id}', function () {
+Route::get('/page/{id}', function ($id) {
 	return json_encode([
-			'result' => true,
-			'data' => [
-					'pageContent' => 'Hello there'
-			]
+		'result' => true,
+		'data' => [
+			'pageContent' => '<h3>' . $id . '</h3><p>Hello there</p>'
+		]
 	]);
 });
 
