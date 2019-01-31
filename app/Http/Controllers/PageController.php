@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Module\Page;
+use App\Module\Post;
 
 class PageController extends Controller {
 	public function getContent($id) {
@@ -15,7 +16,7 @@ class PageController extends Controller {
 			return Page::returnPage('This is the homepage');
 			break;
 		case 'post':
-			return Page::returnPage('This would be where posts gridview shown');
+			return Post::getIndexContent();
 			break;
 		}
 	}
