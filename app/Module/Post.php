@@ -4,11 +4,30 @@ namespace App\Module;
 use App\Module\Page;
 
 class Post {
+	public static function getFields() {
+		return [
+			[
+				'name' => 'id',
+				'title' => 'ID'
+			],
+			[
+				'name' => 'title',
+				'title' => 'Title'
+			],
+			[
+				'name' => 'content',
+				'title' => 'Content'
+			]
+		];
+	}
+
 	public static function getIndexContent() {
 		return Page::returnPage([
 			'data' => self::getDummyContent(),
+			'fields' => self::getFields(),
 			'type' => 'gridview'
-		], true);
+		], true
+		);
 	}
 
 	private static function getDummyContent() {
