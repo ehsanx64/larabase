@@ -24,6 +24,14 @@ class Post {
 		];
 	}
 
+	public static function getGridViewRecordActions() {
+		return [
+			'name' => 'gridview_actions',
+			'title' => 'Actions',
+			'gridable' => true
+		];
+	}
+
 	public static function getGridViewFields() {
 		$fields = self::getFields();
 		$gvfields = [];
@@ -33,6 +41,8 @@ class Post {
 				$gvfields[] = $field;
 			}
 		}
+
+		$gvfields[] = self::getGridViewRecordActions();
 
 		return $gvfields;
 	}
@@ -47,6 +57,31 @@ class Post {
 	}
 
 	private static function getDummyContent() {
+		$cnt = self::getCoreDummyContent();
+		$out = [];
+		$t = [];
+
+		foreach ($cnt as $c) {
+			$t = $c;
+			$t['gridview_actions'] = [
+				[
+					'name' => 'edit',
+					'title' => 'Edit',
+					'color' => 'green'
+				],
+				[
+					'name' => 'remove',
+					'title' => 'Remove',
+					'color' => 'red'
+				]
+			];
+			$out[] = $t;
+		}
+
+		return $out;
+	}
+
+	private static function getCoreDummyContent() {
 		return [
 			[
 				'id' => '1',
