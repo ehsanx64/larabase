@@ -8,23 +8,39 @@ class Post {
 		return [
 			[
 				'name' => 'id',
-				'title' => 'ID'
+				'title' => 'ID',
+				'gridable' => true
 			],
 			[
 				'name' => 'title',
-				'title' => 'Title'
+				'title' => 'Title',
+				'gridable' => true
 			],
 			[
 				'name' => 'content',
-				'title' => 'Content'
+				'title' => 'Content',
+				'gridable' => false
 			]
 		];
+	}
+
+	public static function getGridViewFields() {
+		$fields = self::getFields();
+		$gvfields = [];
+
+		foreach ($fields as $field) {
+			if ($field['gridable'] == true) {
+				$gvfields[] = $field;
+			}
+		}
+
+		return $gvfields;
 	}
 
 	public static function getIndexContent() {
 		return Page::returnPage([
 			'data' => self::getDummyContent(),
-			'fields' => self::getFields(),
+			'fields' => self::getGridViewFields(),
 			'type' => 'gridview'
 		], true
 		);
