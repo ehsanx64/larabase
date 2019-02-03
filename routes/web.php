@@ -17,6 +17,4 @@ Route::get('/', function () {
 
 Route::get('/page/{id}', 'PageController@getContent');
 
-Route::get('/hello', function () {
-    return \App\Module\Main::returnHelloData();
-});
+
