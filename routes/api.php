@@ -19,6 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/hello', function () {
     require __DIR__ . '/ApiErrors.php';
 
-    return \App\Module\Tools::jsonAbort(NOT_AUTHENTICATED, 'User not authenticated');
+//    return \App\Module\Tools::jsonAbort(NOT_AUTHENTICATED, 'User not authenticated');
     return \App\Module\Main::returnHelloData();
 });
