@@ -14,7 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/page/{id}', 'PageController@getContent');
-
-

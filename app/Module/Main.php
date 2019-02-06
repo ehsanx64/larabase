@@ -23,19 +23,19 @@ class Main {
 					'url' => $appUrl,
 					'title' => 'Home',
 					'path' => '/',
-					'contentUrl' => $appUrl . 'page/home'
+					'contentUrl' => $appUrl . 'api/page/home'
 				],
 				'post' => [
 					'url' => $appUrl . 'post',
 					'title' => 'Posts',
 					'path' => '/post',
-					'contentUrl' => $appUrl . 'page/post'
+					'contentUrl' => $appUrl . 'api/page/post'
 				],
 				'about' => [
 					'url' => $appUrl . 'about',
 					'title' => 'About',
 					'path' => '/about',
-					'contentUrl' => $appUrl . 'page/about'
+					'contentUrl' => $appUrl . 'api/page/about'
 				]
 			],
 		]);
