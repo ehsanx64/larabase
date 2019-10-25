@@ -13,7 +13,7 @@ class PageController extends Controller {
 			return Page::returnPage('About page content');
 			break;
 		case 'home':
-			return Page::returnPage('This is the homepage');
+			return Page::returnPage('Welcome to homepage');
 			break;
 		case 'post':
 			return Post::getIndexContent();

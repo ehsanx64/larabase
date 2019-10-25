@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+    return Response::json([
+        'result' => true,
+        'data' => [
+            'name' => 'Ehsan Mohammadi'
+        ]
+    ]);
+});
