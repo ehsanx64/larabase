@@ -27,3 +27,7 @@ Route::get('/test', function () {
 Route::get('/hello', function () {
 	return view('hello');
 });
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index')->name('home');
