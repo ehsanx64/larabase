@@ -7,8 +7,8 @@ use Illuminate\Support\ServiceProvider;
 
 class ComposerServiceProvider extends ServiceProvider {
 	public function boot() {
-		View::composer('*', 'App\Http\ViewComposers\FirstComposer'
-		);
+		// This general composer (FirstComposer) runs for all routes
+		View::composer('*', 'App\Http\ViewComposers\FirstComposer');
 	}
 
 	public function register() {
