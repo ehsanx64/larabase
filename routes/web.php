@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('hello');
+});
+
+Route::get('/hello', function () {
+	return view('hello');
 });
 
 Route::get('/test', function () {
@@ -22,10 +26,6 @@ Route::get('/test', function () {
             'name' => 'Ehsan Mohammadi'
         ]
     ]);
-});
-
-Route::get('/hello', function () {
-	return view('hello');
 });
 
 Auth::routes();
