@@ -1,5 +1,7 @@
 @extends($active_template . '/blank')
 
+@section('custom-page-title', sprintf("%s - %s", ENV('APP_TITLE'), __('Login to system')))
+
 @section('page-content')
     <div class="section"></div>
     <main>
