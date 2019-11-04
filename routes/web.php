@@ -15,19 +15,6 @@ Route::get('/', function () {
     return view('hello');
 });
 
-Route::get('/hello', function () {
-	return view('hello');
-});
-
-Route::get('/test', function () {
-    return Response::json([
-        'result' => true,
-        'data' => [
-            'name' => 'Ehsan Mohammadi'
-        ]
-    ]);
-});
-
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('home');

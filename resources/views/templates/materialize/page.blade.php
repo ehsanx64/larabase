@@ -9,12 +9,20 @@
 </head>
 
 <body>
-	@include('tpls/alpha/nav')
+	@include('templates/materialize/nav')
 
 	<div class="container">
 		<div class="row">
-			@include('tpls.alpha.sidebar')
-			@include('tpls.alpha.content')
+			<div class="col s12 m3 sidebar-wrapper">
+				<div class="row">
+					<h3>Sidebar</h3>
+				</div>
+			</div>
+			<div class="col s12 m3 content-wrapper">
+				<div class="row">
+					@yield('pagecontent')
+				</div>
+			</div>
 		</div>
 	</div>
 
