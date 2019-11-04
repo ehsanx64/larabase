@@ -1,69 +1,56 @@
 @extends($active_template . '/blank')
 
 @section('page-content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+    <div class="section"></div>
+    <main>
+        <center>
+            <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif"/>
+            <div class="section"></div>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+            <h5 class="indigo-text">{{ lbh_t('Login to system') }}</h5>
+            <div class="section"></div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+            <div class="container">
+                <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+                    <form class="col s12" method="post">
+                        <div class='row'>
+                            <div class='col s12'>
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='email' name='email' id='email'/>
+                                <label for='email'>{{ lbh_t('Enter your email') }}</label>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='password' name='password' id='password'/>
+                                <label for='password'>{{ lbh_t('Enter your password') }}</label>
                             </div>
+                            <label style='float: right;'>
+                                <a class='pink-text' href='#!'><b>{{ lbh_t('Forgot Password?') }}</b></a>
+                            </label>
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
+                        <br/>
+                        <center>
+                            <div class='row'>
+                                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>
+                                    {{ lbh_t('Login') }}
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
                             </div>
-                        </div>
+                        </center>
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+            <a href="#!">{{ lbh_t('Create account') }}</a>
+        </center>
+
+        <div class="section"></div>
+        <div class="section"></div>
+    </main>
 @endsection

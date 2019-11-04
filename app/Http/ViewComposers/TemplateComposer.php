@@ -17,7 +17,9 @@ class TemplateComposer {
 			'apptitle' => ENV('APP_TITLE'),
 			'appname' => ENV('APP_NAME'),
 			'active_template' => $this->getActiveTemplate(),
-			'sidebar_content' => $this->getSidebarContent()
+			'sidebar_content' => $this->getSidebarContent(),
+            'language' => 'fa',
+            'locale' => 'fa_IR'
 		];
 
 		$view->with($data);
