@@ -3,52 +3,53 @@
 @section('page-content')
     <div class="section"></div>
     <main>
-        <center>
-            <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif"/>
-            <div class="section"></div>
+        {{--
+        <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif"/>
+        <div class="section"></div>
+        --}}
 
-            <h5 class="indigo-text">{{ lbh_t('Login to system') }}</h5>
-            <div class="section"></div>
+        <h5 class="indigo-text">{{ lbh_t('Login to system') }}</h5>
+        <div class="section"></div>
 
-            <div class="container">
-                <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        <div class="container">
+            <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
-                    <form class="col s12" method="post">
-                        <div class='row'>
-                            <div class='col s12'>
-                            </div>
+                <form class="col s12" method="post">
+                    <div class='row'>
+                        <div class='col s12'>
                         </div>
+                    </div>
 
-                        <div class='row'>
-                            <div class='input-field col s12'>
-                                <input class='validate' type='email' name='email' id='email'/>
-                                <label for='email'>{{ lbh_t('Enter your email') }}</label>
-                            </div>
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <input class='validate' type='email' name='email' id='email'/>
+                            <label for='email'>{{ lbh_t('Enter your email') }}</label>
                         </div>
+                    </div>
 
-                        <div class='row'>
-                            <div class='input-field col s12'>
-                                <input class='validate' type='password' name='password' id='password'/>
-                                <label for='password'>{{ lbh_t('Enter your password') }}</label>
-                            </div>
-                            <label style='float: right;'>
-                                <a class='pink-text' href='#!'><b>{{ lbh_t('Forgot Password?') }}</b></a>
-                            </label>
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <input class='validate' type='password' name='password' id='password'/>
+                            <label for='password'>{{ lbh_t('Enter your password') }}</label>
                         </div>
+                        <label style='float: right;'>
+                            <a class='pink-text' href='#!'><b>{{ lbh_t('Forgot Password?') }}</b>
+                            </a>
+                        </label>
+                    </div>
 
-                        <br/>
-                        <center>
-                            <div class='row'>
-                                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>
-                                    {{ lbh_t('Login') }}
-                                </button>
-                            </div>
-                        </center>
-                    </form>
-                </div>
+                    <br/>
+                    <center>
+                        <div class='row'>
+                            <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>
+                                {{ lbh_t('Login') }}
+                            </button>
+                        </div>
+                    </center>
+                </form>
             </div>
-            <a href="#!">{{ lbh_t('Create account') }}</a>
-        </center>
+        </div>
+        <a href="#!">{{ lbh_t('Create account') }}</a>
 
         <div class="section"></div>
         <div class="section"></div>
