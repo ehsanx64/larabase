@@ -10,7 +10,7 @@
 
 			<div class="topmenu left">
 				<ul>
-                    <li><a href="/login">Login</a></li>
+                    <li><a href="/login">{{ __('Login') }}</a></li>
 				</ul>
 			</div>
 		</div>
