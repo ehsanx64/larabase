@@ -16,13 +16,22 @@ class TemplateComposer {
 			'pagetitle' => ENV('APP_TITLE') . ' - Hello',
 			'apptitle' => ENV('APP_TITLE'),
 			'appname' => ENV('APP_NAME'),
-			'active_template' => $this->getActiveTemplate()
+			'active_template' => $this->getActiveTemplate(),
+			'sidebar_content' => $this->getSidebarContent()
 		];
 
 		$view->with($data);
 	}
 
 	public function getActiveTemplate() {
-		return 'templates/materialize/page';
+		return 'templates/materialize';
+	}
+
+	public function getSidebarContent() {
+		ob_start();
+		?>
+		<h3>The Sidebar</h3>
+		<?php
+        return ob_get_clean();
 	}
 }

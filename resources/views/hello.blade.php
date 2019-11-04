@@ -1,6 +1,6 @@
-@extends($active_template)
+@extends($active_template . '/page')
 
-@section('pagecontent')
+@section('page-content')
 <h1>Hello there</h1>
 @endsection()
 

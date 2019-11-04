@@ -9,23 +9,7 @@
 </head>
 
 <body>
-	@include('templates/materialize/nav')
-
-	<div class="container">
-		<div class="row">
-			<div class="col s12 m3 sidebar-wrapper">
-				<div class="row">
-					{!! $sidebar_content !!}
-				</div>
-			</div>
-
-			<div class="col s12 m3 content-wrapper">
-				<div class="row">
-					@yield('page-content')
-				</div>
-			</div>
-		</div>
-	</div>
+	@yield('page-content')
 
 	<script type="text/javascript" src="/materialize/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
