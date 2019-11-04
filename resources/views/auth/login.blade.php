@@ -8,7 +8,7 @@
         <div class="section"></div>
         --}}
 
-        <h5 class="indigo-text">{{ lbh_t('Login to system') }}</h5>
+        <h5 class="indigo-text">{{ __('Login to system') }}</h5>
         <div class="section"></div>
 
         <div class="container">
@@ -23,17 +23,17 @@
                     <div class='row'>
                         <div class='input-field col s12'>
                             <input class='validate' type='email' name='email' id='email'/>
-                            <label for='email'>{{ lbh_t('Enter your email') }}</label>
+                            <label for='email'>{{ __('Enter your email') }}</label>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='input-field col s12'>
                             <input class='validate' type='password' name='password' id='password'/>
-                            <label for='password'>{{ lbh_t('Enter your password') }}</label>
+                            <label for='password'>{{ __('Enter your password') }}</label>
                         </div>
                         <label style='float: right;'>
-                            <a class='pink-text' href='#!'><b>{{ lbh_t('Forgot Password?') }}</b>
+                            <a class='pink-text' href='#!'><b>{{ __('Forgot Password?') }}</b>
                             </a>
                         </label>
                     </div>
@@ -42,14 +42,14 @@
                     <center>
                         <div class='row'>
                             <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>
-                                {{ lbh_t('Login') }}
+                                {{ __('Login') }}
                             </button>
                         </div>
                     </center>
                 </form>
             </div>
         </div>
-        <a href="#!">{{ lbh_t('Create account') }}</a>
+        <a href="#!">{{ __('Create account') }}</a>
 
         <div class="section"></div>
         <div class="section"></div>
