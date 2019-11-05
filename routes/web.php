@@ -11,22 +11,15 @@
 |
 */
 
-Route::get(
-	'/', function () {
+Route::get('/', function () {
 	return view('hello');
 });
 
-Auth::routes();
-
 Route::get('/admin', 'AdminController@index');
 
-Route::group(
-	array('namespace' => 'admin', 'prefix' => 'admin'), function () {
-	Route::resource('blog', 'BlogController');
-});
-
-//Route::get('/dashboard', 'DashboardController@index')->name('home');
+Route::resources([
+	'loose' => 'LooseController'
+]);
+defineModuleAdmin('loose');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
