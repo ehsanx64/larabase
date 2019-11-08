@@ -12,7 +12,11 @@ class AdminController extends BaseController {
 		$this->middleware('auth');
 	}
 
+	protected function render($tplfile) {
+	}
+
 	public function index() {
-		return __METHOD__;
+//		return __METHOD__;
+		return view('templates.admin-materialize.page');
 	}
 }
