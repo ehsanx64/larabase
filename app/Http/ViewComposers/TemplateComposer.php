@@ -9,7 +9,19 @@ use Illuminate\View\View;
  */
 
 class TemplateComposer {
+	/**
+	 * This URI point to root location in which template assets (active template) reside.
+	 */
+    protected $assetsUri;
+
+	/**
+	 * Same as above; but this one holds uri for admin's (control panel) template.
+	 */
+    protected $adminAssetsUri;
+
 	public function __construct() {
+	    $this->assetsUri = sprintf("templates/%s", ENV('APP_TEMPLATE'));
+	    $this->adminAssetsUri = sprintf("templates/%s", ENV('APP_ADMIN_TEMPLATE'));
 	}
 
 	public function compose(View $view) {
@@ -24,7 +36,8 @@ class TemplateComposer {
 			'pagetitle' => ENV('APP_TITLE'),
 			'apptitle' => ENV('APP_TITLE'),
 			'appname' => ENV('APP_NAME'),
-			'active_template' => $this->getActiveTemplate(),
+			'active_template' => $this->assetsUri,
+            'active_admin_template' => $this->adminAssetsUri,
 			'sidebar_content' => $this->getSidebarContent(),
 			'pagelanguage' => $lang,
 		];
