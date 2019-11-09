@@ -7,16 +7,13 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-class AdminController extends BaseController {
+class AdminController extends Controller {
 	public function __construct() {
 		$this->middleware('auth');
 	}
 
-	protected function render($tplfile) {
-	}
-
 	public function index() {
 //		return __METHOD__;
-		return view('templates.admin-materialize.page');
+		return $this->render('index'); //('templates.admin-materialize.page');
 	}
 }

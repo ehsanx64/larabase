@@ -9,4 +9,10 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController {
 	use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+	protected function render($viewfile) {
+		$target = strtolower(str_replace('Controller', '',
+			class_basename(app('request')->route()->controller)));
+		return view("$target.$viewfile");
+	}
 }

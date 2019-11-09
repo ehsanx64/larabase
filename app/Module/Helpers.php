@@ -35,3 +35,7 @@ function defineModuleAdmin($moduleName, $routeType = 'get') {
 	Route::$routeType(sprintf("/admin/%s", $moduleName),
 		sprintf("%s@admin", ucfirst($moduleName) . 'Controller'))->middleware('auth');
 }
+
+function frontTpl($layout) {
+	return $aft . '/' . $layout;
+}

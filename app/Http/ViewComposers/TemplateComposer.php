@@ -19,12 +19,19 @@ class TemplateComposer {
 	 */
     protected $adminAssetsUri;
 
+    protected $templatePath;
+    protected $adminTemplatePath;
+
 	public function __construct() {
-	    $this->assetsUri = sprintf("templates/%s", ENV('APP_TEMPLATE'));
-	    $this->adminAssetsUri = sprintf("templates/%s", ENV('APP_ADMIN_TEMPLATE'));
+	    $this->assetsUri = sprintf("/%s", ENV('APP_TEMPLATE'));
+	    $this->adminAssetsUri = sprintf("/%s", ENV('APP_ADMIN_TEMPLATE'));
+
+		$this->templatePath = sprintf("templates/%s", ENV('APP_TEMPLATE'));
+		$this->adminTemplatePath = sprintf("templates/%s", ENV('APP_ADMIN_TEMPLATE'));
 	}
 
 	public function compose(View $view) {
+	    dd(app('request')->route());
 	    // This is the default locale
 		$lang = 'fa';
 
@@ -36,17 +43,15 @@ class TemplateComposer {
 			'pagetitle' => ENV('APP_TITLE'),
 			'apptitle' => ENV('APP_TITLE'),
 			'appname' => ENV('APP_NAME'),
-			'active_template' => $this->assetsUri,
-            'active_admin_template' => $this->adminAssetsUri,
+            'fe' => $this->templatePath,
+            'be' => $this->adminTemplatePath,
+			'fea' => $this->assetsUri,
+            'bea' => $this->adminAssetsUri,
 			'sidebar_content' => $this->getSidebarContent(),
 			'pagelanguage' => $lang,
 		];
 
 		$view->with($data);
-	}
-
-	public function getActiveTemplate() {
-		return 'templates/materialize';
 	}
 
 	public function getSidebarContent() {

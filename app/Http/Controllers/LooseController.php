@@ -12,7 +12,7 @@ class LooseController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		return __METHOD__;
+		return $this->render('index');
 	}
 
 	/**
@@ -76,7 +76,7 @@ class LooseController extends Controller {
 	}
 
 	public function admin(Loose $loose) {
-		return __METHOD__;
+		return $this->render('admin');
 	}
 
 
