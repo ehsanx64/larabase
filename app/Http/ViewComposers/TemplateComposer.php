@@ -5,7 +5,20 @@ namespace App\Http\ViewComposers;
 use Illuminate\View\View;
 
 /*
- * This view composer handles the template system
+ * This view composer handles the template system.
+ *
+ * The template view composer defines several variables accessible in views which are listed below:
+ *
+ * app_name     The name of application.
+ * app_title    This is usually translated app_name. This variable is a form of app_name but for
+ *              displaying purposes.
+ * page_title   The page title (the text that goes into <title> tag in page's head.
+ * panel_title  The title of panel (this is used mostly in back-end pages)
+ * template     Where are template files located. This variable depending on the controller may
+ *              refer to back-end or front-end template.
+ * assets       Same as above but holds location to static assets. Somewhere in $wwwroot/public folder.
+ * sidebar_content Content that will be inserted in sidebar.
+ * page_language The language for the page. This will be used for setting the page language (html lang="fa") etc
  */
 
 class TemplateComposer {
