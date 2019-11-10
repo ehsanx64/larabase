@@ -17,3 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/hello', function () {
+	require __DIR__ . '/ApiErrors.php';
+
+	return \App\Module\Main::returnHelloData();
+});
+
+Route::post('/page/{id}', 'PageController@getContent');
