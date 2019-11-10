@@ -1,4 +1,4 @@
-@extends($be . '/page')
+@extends($template . '/page')
 
 @section('page-content')
 <h1>Target: adminindex</h1>

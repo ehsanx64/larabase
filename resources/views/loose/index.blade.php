@@ -1,4 +1,4 @@
-@extends("$fe/page")
+@extends("$template/page")
 
 @section('page-content')
 <h1>Target: loose/index</h1>

@@ -2,9 +2,9 @@
 <html lang="{{ $pagelanguage }}">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link type="text/css" rel="stylesheet" href="{{ $fea }}/css/materialize.min.css" media="screen, projection"/>
-    <link type="text/css" rel="stylesheet" href="{{ $fea }}/css/font-awesome.min.css" media="screen, projection"/>
-    <link type="text/css" rel="stylesheet" href="{{ $fea }}/rtl/rtl.css"/>
+    <link type="text/css" rel="stylesheet" href="{{ $assets }}/css/materialize.min.css" media="screen, projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ $assets }}/css/font-awesome.min.css" media="screen, projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ $assets }}/rtl/rtl.css"/>
 	<title>@hasSection('custom-page-title') @yield('custom-page-title') @else {{ $pagetitle }}@endif</title>
 </head>
 
@@ -27,8 +27,8 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="{{ $fea }}/js/jquery.min.js"></script>
-	<script type="text/javascript" src="{{ $fea }}/js/materialize.min.js"></script>
-	<script type="text/javascript" src="{{ $fea }}/js/custom.js"></script>
+	<script type="text/javascript" src="{{ $assets }}/js/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ $assets }}/js/materialize.min.js"></script>
+	<script type="text/javascript" src="{{ $assets }}/js/custom.js"></script>
 </body>
 </html>

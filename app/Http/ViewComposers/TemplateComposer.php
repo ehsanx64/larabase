@@ -31,9 +31,9 @@ class TemplateComposer {
 	}
 
 	public function compose(View $view) {
-	    dd(app('request')->route());
 	    // This is the default locale
 		$lang = 'fa';
+		$route = app('request')->route()->uri;
 
 		if (\Session::has('locale')) {
 			$lang = \Session::get('locale');
@@ -43,13 +43,20 @@ class TemplateComposer {
 			'pagetitle' => ENV('APP_TITLE'),
 			'apptitle' => ENV('APP_TITLE'),
 			'appname' => ENV('APP_NAME'),
-            'fe' => $this->templatePath,
-            'be' => $this->adminTemplatePath,
-			'fea' => $this->assetsUri,
-            'bea' => $this->adminAssetsUri,
+            'template' => $this->templatePath,
+            'assets' => $this->assetsUri,
 			'sidebar_content' => $this->getSidebarContent(),
 			'pagelanguage' => $lang,
 		];
+
+		// If route starts with admin set active template as an admin template
+		$p = 'admin';
+		if (substr($route, 0, strlen($p)) === $p) {
+            $data['template'] = $this->adminTemplatePath;
+            $data['assets'] = $this->adminAssetsUri;
+		}
+
+//		dd($data);
 
 		$view->with($data);
 	}
