@@ -7,32 +7,32 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ isset($title) ? 'این‌کاره - ' . $title : 'این‌کاره' }}</title>
+    <title>{{ $page_title }}</title>
 
     <!-- External stylesheets -->
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
 
-    <link rel="icon" href="{{ $assetsUrl }}/img/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="{{ $assets }}/img/favicon.png" type="image/x-icon"/>
 
     <!-- Core stylesheets -->
-    <link href="{{ $assetsUrl }}/css/bootstrap.rtl.css?v=1" rel="stylesheet" type="text/css">
-    <link href="{{ $assetsUrl }}/css/pixeladmin.rtl.css?v=1" rel="stylesheet" type="text/css">
-    <link href="{{ $assetsUrl }}/css/widgets.rtl.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{{ $assetsUrl }}/font-awesome/css/font-awesome.min.css"
+    <link href="{{ $assets }}/css/bootstrap.rtl.css?v=1" rel="stylesheet" type="text/css">
+    <link href="{{ $assets }}/css/pixeladmin.rtl.css?v=1" rel="stylesheet" type="text/css">
+    <link href="{{ $assets }}/css/widgets.rtl.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ $assets }}/font-awesome/css/font-awesome.min.css"
           type="text/css"/><!-- Font Awesome -->
-    <link href="{{ $assetsUrl }}/css/multiple-select.css" rel="stylesheet" type="text/css">
+    <link href="{{ $assets }}/css/multiple-select.css" rel="stylesheet" type="text/css">
     <!-- Theme -->
-    <link href="{{ $assetsUrl }}/css/themes/clean.rtl.css" rel="stylesheet" type="text/css">
-    <script src="{{ $assetsUrl }}/js/jquery-3.1.1.min.js"></script>
+    <link href="{{ $assets }}/css/themes/clean.rtl.css" rel="stylesheet" type="text/css">
+    <script src="{{ $assets }}/js/jquery-3.1.1.min.js"></script>
 
-    <link href="{{ $assetsUrl }}/css/jquery.bootgrid.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="{{ $assetsUrl }}/js/jquery.bootgrid.min.js"></script>
+    <link href="{{ $assets }}/css/jquery.bootgrid.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="{{ $assets }}/js/jquery.bootgrid.min.js"></script>
 
-    <script type="text/javascript" src="{{ $assetsUrl }}/js/numeral.min.js"></script>
-    <link type="text/css" href="{{ $assetsUrl }}/css/js-persian-cal.css" rel="stylesheet"/>
-    <script type="text/javascript" src="{{ $assetsUrl }}/js/js-persian-cal.min.js"></script>
-    <script type="text/javascript" src="{{ $assetsUrl }}/js/jquery.form.js"></script>
-    <script type="text/javascript" src="{{ $assetsUrl }}/js/multiple-select.js"></script>
+    <script type="text/javascript" src="{{ $assets }}/js/numeral.min.js"></script>
+    <link type="text/css" href="{{ $assets }}/css/js-persian-cal.css" rel="stylesheet"/>
+    <script type="text/javascript" src="{{ $assets }}/js/js-persian-cal.min.js"></script>
+    <script type="text/javascript" src="{{ $assets }}/js/jquery.form.js"></script>
+    <script type="text/javascript" src="{{ $assets }}/js/multiple-select.js"></script>
 
     <style type="text/css">
         .blue {
@@ -297,8 +297,8 @@
     <!-- Header -->
     <div class="navbar-header">
         <a class="navbar-brand px-demo-brand" href=""><span class="px-demo-logo"> <img
-                        src="{{ $assetsUrl }}/img/logo.png" alt="Logo"
-                        style="height: 32px;"/> </span> &nbsp;&nbsp;{{ $panelTitle }}</a>
+                        src="{{ $assets }}/img/logo.png" alt="Logo"
+                        style="height: 32px;"/> </span> &nbsp;&nbsp;{{ $panel_title }}</a>
     </div>
 
     <!-- Navbar togglers -->
@@ -652,9 +652,9 @@
 <!-- Load jQuery -->
 
 <!-- Core scripts -->
-<script src="{{ $assetsUrl }}/js/bootstrap.js"></script>
-<script src="{{ $assetsUrl }}/js/pixeladmin.js"></script>
-<script type="text/javascript" src="{{ $assetsUrl }}/js/jquery.isloading.min.js"></script>
+<script src="{{ $assets }}/js/bootstrap.js"></script>
+<script src="{{ $assets }}/js/pixeladmin.js"></script>
+<script type="text/javascript" src="{{ $assets }}/js/jquery.isloading.min.js"></script>
 
 
 <script type="text/javascript">
@@ -697,6 +697,6 @@
     });
 </script>
 @yield('footer-content')
-<script type="text/javascript" src="{{ $assetsUrl }}/js/scripts.js"></script>
+<script type="text/javascript" src="{{ $assets }}/js/scripts.js"></script>
 </body>
 </html>

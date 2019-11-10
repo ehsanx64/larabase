@@ -12,8 +12,12 @@ class AdminController extends Controller {
 		$this->middleware('auth');
 	}
 
+	/**
+	 * This action render the main admin page on back-end
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
 	public function index() {
-//		return __METHOD__;
-		return $this->render('index'); //('templates.admin-materialize.page');
+		return $this->render('index');
 	}
 }

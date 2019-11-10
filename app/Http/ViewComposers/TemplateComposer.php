@@ -34,19 +34,22 @@ class TemplateComposer {
 	    // This is the default locale
 		$lang = 'fa';
 		$route = app('request')->route()->uri;
+		$appName = ENV('APP_NAME');
+		$appTitle = ENV('APP_TITLE');
 
 		if (\Session::has('locale')) {
 			$lang = \Session::get('locale');
 		}
 
 		$data = [
-			'pagetitle' => ENV('APP_TITLE'),
-			'apptitle' => ENV('APP_TITLE'),
-			'appname' => ENV('APP_NAME'),
+            'app_name' => $appName,
+            'app_title' => $appTitle,
+            'page_title' => __($appName),
+            'panel_title' => __("$appName Control Panel"),
             'template' => $this->templatePath,
             'assets' => $this->assetsUri,
 			'sidebar_content' => $this->getSidebarContent(),
-			'pagelanguage' => $lang,
+            'page_language' => $lang
 		];
 
 		// If route starts with admin set active template as an admin template

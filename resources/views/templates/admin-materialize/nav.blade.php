@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
 	<nav>
 		<div class="nav-wrapper container">
-			<a href="{{ URL::to('/') }}" class="brand-logo">{{ $apptitle }}</a>
+			<a href="{{ URL::to('/') }}" class="brand-logo">{{ $app_title }}</a>
 			<div class="navmenu right hide-on-med-and-down">
 				<ul>
 					<li><a href="#">آیتم ۱</a></li>

@@ -22,11 +22,12 @@ class Controller extends BaseController {
 	 * and loads the given view from a directory with the same name as the controller.
 	 *
 	 * @param $viewfile string Name of view to be rendered
+	 * @param $data array Array containing variables to be passed on to view and/or template
 	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
 	 */
-	protected function render($viewfile) {
+	protected function render($viewfile, $data = []) {
 		$target = strtolower(str_replace('Controller', '',
 			class_basename(app('request')->route()->controller)));
-		return view("$target.$viewfile");
+		return view("$target.$viewfile", $data);
 	}
 }
