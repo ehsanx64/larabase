@@ -1,4 +1,4 @@
-@extends($active_template . '/blank')
+@extends("$template/blank")
 
 @section('custom-page-title', sprintf("%s - %s", ENV('APP_TITLE'), __('Login to system')))
 

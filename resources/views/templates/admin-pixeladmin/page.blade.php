@@ -384,7 +384,7 @@
 
 <!-- Content -->
 <div class="px-content">
-    <h2>{{ $title }}</h2>
+    <h2>{{ $panel_title }}</h2>
 
     @yield('content')
 </div>

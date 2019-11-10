@@ -72,8 +72,6 @@ class TemplateComposer {
             $data['assets'] = $this->adminAssetsUri;
 		}
 
-//		dd($data);
-
 		$view->with($data);
 	}
 
