@@ -49,6 +49,7 @@ class TemplateComposer {
 		$route = app('request')->route()->uri;
 		$appName = ENV('APP_NAME');
 		$appTitle = ENV('APP_TITLE');
+		$appUrl = ENV('APP_URL');
 
 		if (\Session::has('locale')) {
 			$lang = \Session::get('locale');
@@ -57,6 +58,7 @@ class TemplateComposer {
 		$data = [
             'app_name' => $appName,
             'app_title' => $appTitle,
+			'app_url' => $appUrl,
             'page_title' => __($appName),
             'panel_title' => __("$appName Control Panel"),
             'template' => $this->templatePath,
