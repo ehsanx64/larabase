@@ -1,6 +1,2 @@
-@extends("$template/page")
-
-@section('page-content')
-<h1>Hello there</h1>
-@endsection()
+@extends("$template/homepage")
 
