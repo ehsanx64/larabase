@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen, projection"/>
     <link type="text/css" rel="stylesheet" href="/materialize/css/font-awesome.min.css" media="screen, projection"/>
+	<link type="text/css" rel="stylesheet" href="/materialize/css/material-icons.css" media="screen, projection"/>
     <link type="text/css" rel="stylesheet" href="/materialize/rtl/rtl.css"/>
     <link type="text/css" rel="stylesheet" href="/css/login.css"/>
 	<title>@hasSection('custom-page-title') @yield('custom-page-title') @else {{ $pagetitle }}@endif</title>
