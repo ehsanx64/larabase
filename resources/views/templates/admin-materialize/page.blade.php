@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	@include('templates/admin-materialize/nav')
+	@include("$template/_nav")
 
 	<div class="container">
 		<div class="row">
