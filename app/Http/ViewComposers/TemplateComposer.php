@@ -78,6 +78,8 @@ class TemplateComposer {
 	}
 
 	public function getSidebarContent() {
+	    // TODO: Implement how sidebar works
+	    return '';
 		ob_start();
 		?>
         <h3>The Sidebar</h3>
