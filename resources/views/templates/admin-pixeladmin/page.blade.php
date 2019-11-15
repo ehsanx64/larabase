@@ -12,7 +12,7 @@
     <!-- External stylesheets -->
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
 
-    <link rel="icon" href="{{ $assets }}/img/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
 
     <!-- Core stylesheets -->
     <link href="{{ $assets }}/css/bootstrap.rtl.css?v=1" rel="stylesheet" type="text/css">
@@ -232,8 +232,6 @@
     }
     ?>
 
-    <link href="/css/style.css" type="text/css" rel="stylesheet"/>
-
     <script type="text/javascript">
         //var siteURL = 'http://club.acccard.com/filemanager/';
         var siteURL = 'http://club.acccard.com/filemanager/index.html';
@@ -297,7 +295,7 @@
     <!-- Header -->
     <div class="navbar-header">
         <a class="navbar-brand px-demo-brand" href=""><span class="px-demo-logo"> <img
-                        src="{{ $assets }}/img/logo.png" alt="Logo"
+                        src="/img/logo.png" alt="Logo"
                         style="height: 32px;"/> </span> &nbsp;&nbsp;{{ $panel_title }}</a>
     </div>
 
