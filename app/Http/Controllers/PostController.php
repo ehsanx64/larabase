@@ -8,7 +8,7 @@ use App\Post;
 class PostController extends Controller {
 	public function index() {
 		// Use a query scope named published
-		$posts = Post::latest('published_at')->published()->get();
+		$posts = Post::latest('created_at')->published()->get();
 		return View('posts.index')->with(['posts' => $posts]);
 	}
 
