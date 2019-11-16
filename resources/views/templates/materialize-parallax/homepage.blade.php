@@ -1,4 +1,6 @@
-@extends("$template/page")
+@extends("$template/blank")
+
+@include("$template/_nav")
 
 @section('page-content')
 <div id="index-banner" class="parallax-container">

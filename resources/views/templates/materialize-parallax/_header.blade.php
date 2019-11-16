@@ -18,5 +18,4 @@
 
 </head>
 <body>
-@include("$template/_nav")
 
