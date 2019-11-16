@@ -8,7 +8,12 @@ use App\Post;
 
 class PostController extends Controller {
 	public function index() {
-		$posts = Post::latest()->get();
+		// We'll add a query scope instead of following code
+//		$posts = Post::latest('published_at')->where('published_at', '<=', Carbon::now())->get();
+
+		// Use a query scope named published
+		$posts = Post::latest('published_at')->published()->get();
+
 		return View('posts.index')->with(['posts' => $posts]);
 	}
 
@@ -22,9 +27,8 @@ class PostController extends Controller {
 	}
 
 	public function store() {
-		$fields = \Request::all();
-		$fields['published_at'] = Carbon::now();
-		Post::create($fields);
+		//		$fields['published_at'] = Carbon::now();
+		Post::create(\Request::all());
 		return redirect('posts');
 	}
 }
