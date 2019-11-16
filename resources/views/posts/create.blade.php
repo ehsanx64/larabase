@@ -30,6 +30,15 @@
 					<input type="submit" class="waves-effect waves-light btn" value="{{ __('Create') }}" />
 				</div>
 			</form>
+
+			{{-- TODO: Make error list structure/style better --}}
+			@if ($errors->any())
+				<ul>
+					@foreach ($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			@endif
 		</div>
 	</div>
 @endsection()

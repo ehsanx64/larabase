@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
-use Illuminate\Http\Request;
+use App\Http\Requests\CreatePostRequest;
 use App\Post;
 
 class PostController extends Controller {
 	public function index() {
 		// Use a query scope named published
 		$posts = Post::latest('published_at')->published()->get();
-
 		return View('posts.index')->with(['posts' => $posts]);
 	}
 
@@ -23,8 +21,8 @@ class PostController extends Controller {
 		return View('posts.create');
 	}
 
-	public function store() {
-		Post::create(\Request::all());
+	public function store(CreatePostRequest $request) {
+		Post::create($request->all());
 		return redirect('posts');
 	}
 }
