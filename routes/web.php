@@ -29,4 +29,9 @@ defineModuleAdmin('loose');
 //	]
 //]);
 
+// TODO: FIND A DRYied method for route declarations
+// Post related routes
+Route::get('/posts', 'PostController@index');
+Route::get('/posts/{id}', 'PostController@show');
+
 Auth::routes();

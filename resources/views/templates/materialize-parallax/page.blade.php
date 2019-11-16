@@ -1,6 +1,8 @@
 @include("$template/_header")
 
-@yield('page-content')
+<div class="container">
+	@yield('page-content')
+</div>
 
 @include("$template/_footer")
 
