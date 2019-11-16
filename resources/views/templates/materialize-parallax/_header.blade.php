@@ -8,8 +8,9 @@
 	<link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
 
 	<!-- CSS  -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="{{ $assets }}/css/material-icons.css" media="screen, projection"/>
 	<link href="{{ $assets }}/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 	<link href="{{ $assets }}/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
 	@if($page_language === 'fa')
