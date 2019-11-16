@@ -4,6 +4,9 @@
   "Enter your password": "رمزعبور خود را وارد کنید",
   "Forgot Password?": "رمزعبور را فراموش کرده‌اید؟",
   "Login": "ورود",
-  "Create account": "ایجاد حساب کاربری"
-
+  "Create account": "ایجاد حساب کاربری",
+  "Title": "عنوان",
+  "Excerpt": "چکیده",
+  "Content": "محتوا",
+  "Ending": "This is the ending item"
 }
