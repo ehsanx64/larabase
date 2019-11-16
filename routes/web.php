@@ -22,4 +22,11 @@ Route::resources([
 ]);
 defineModuleAdmin('loose');
 
+// TODO: Write a function similar to below for DRY sake
+//attachModule([
+//	'loose' => [
+//		'controller' => 'LooseController'
+//	]
+//]);
+
 Auth::routes();
