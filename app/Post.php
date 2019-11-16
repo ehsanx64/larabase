@@ -9,8 +9,8 @@ class Post extends Model {
 	// List of mass assignable fields
 	protected $fillable = ['title', 'content', 'excerpt', 'published_at'];
 
+	// List of fields that should be converted to Carbon instances
 	protected $dates = ['published_at'];
-
 
 	// This is a mutator
 	public function setPublishedAtAttribute($date) {
