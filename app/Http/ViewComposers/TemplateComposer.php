@@ -3,6 +3,7 @@
 namespace App\Http\ViewComposers;
 
 use Illuminate\View\View;
+use Whoops\Util\TemplateHelper;
 
 /*
  * This view composer handles the template system.
@@ -34,13 +35,17 @@ class TemplateComposer {
 
     protected $templatePath;
     protected $adminTemplatePath;
+    protected $templateName;
+    protected $adminTemplateName;
 
 	public function __construct() {
-	    $this->assetsUri = sprintf("/%s", ENV('APP_TEMPLATE'));
-	    $this->adminAssetsUri = sprintf("/%s", ENV('APP_ADMIN_TEMPLATE'));
+	    $this->templateName = ENV('APP_TEMPLATE');
+	    $this->adminTemplateName = ENV('APP_ADMIN_TEMPLATE');
+	    $this->assetsUri = sprintf("/%s", $this->templateName);
+	    $this->adminAssetsUri = sprintf("/%s", $this->adminTemplateName);
 
-		$this->templatePath = sprintf("templates/%s", ENV('APP_TEMPLATE'));
-		$this->adminTemplatePath = sprintf("templates/%s", ENV('APP_ADMIN_TEMPLATE'));
+		$this->templatePath = sprintf("templates/%s", $this->templateName);
+		$this->adminTemplatePath = sprintf("templates/%s", $this->adminTemplateName);
 	}
 
 	public function compose(View $view) {
@@ -50,6 +55,7 @@ class TemplateComposer {
 		$appName = ENV('APP_NAME');
 		$appTitle = ENV('APP_TITLE');
 		$appUrl = ENV('APP_URL');
+		$ds = DIRECTORY_SEPARATOR;
 
 		if (\Session::has('locale')) {
 			$lang = \Session::get('locale');
@@ -67,12 +73,17 @@ class TemplateComposer {
             'page_language' => $lang
 		];
 
-		// If route starts with admin set active template as an admin template
-		$p = 'admin';
-		if (substr($route, 0, strlen($p)) === $p) {
-            $data['template'] = $this->adminTemplatePath;
-            $data['assets'] = $this->adminAssetsUri;
-		}
+		if ($this->shouldUseAdminTemplate($route)) {
+			$data['template'] = $this->adminTemplatePath;
+			$data['assets'] = $this->adminAssetsUri;
+
+			$templateHalperPath = sprintf("%s/resources/views/templates/%s/TH.php",
+                dirname(dirname(dirname(__DIR__))), $this->adminTemplateName);
+			require_once $templateHalperPath;
+//			$data['th'] = \TemplateTagger;
+//			$data['model'] = false;
+        }
+
 
 		$view->with($data);
 	}
@@ -86,4 +97,16 @@ class TemplateComposer {
 		<?php
 		return ob_get_clean();
 	}
+
+	private function shouldUseAdminTemplate($route) {
+		// If route starts with admin set active template as an admin template
+		$p = 'admin';
+		if (substr($route, 0, strlen($p)) === $p) {
+			return true;
+		}
+
+		if (preg_match('/(edit|create)$/', $route)) {
+		    return true;
+        }
+    }
 }

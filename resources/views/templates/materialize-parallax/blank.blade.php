@@ -6,7 +6,7 @@
 	<title>{{ $page_title }}</title>
 
 	<!-- CSS  -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="{{ $assets }}/css/material-icons.css" media="screen, projection"/>
 	<link href="{{ $assets }}/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="{{ $assets }}/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="/css/login.css"/>
@@ -21,7 +21,7 @@
 @yield('page-content')
 
 <!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{{ $assets }}/js/jquery.min.js"></script>
 <script src="{{ $assets }}/js/materialize.js"></script>
 <script src="{{ $assets }}/js/init.js"></script>
 

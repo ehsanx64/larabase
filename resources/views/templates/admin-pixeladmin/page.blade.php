@@ -10,7 +10,7 @@
     <title>{{ $page_title }}</title>
 
     <!-- External stylesheets -->
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    {{--<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">--}}
 
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
 
@@ -384,7 +384,7 @@
 <div class="px-content">
     <h2>{{ $panel_title }}</h2>
 
-    @yield('content')
+    @yield('page-content')
 </div>
 
 <!-- Footer -->
