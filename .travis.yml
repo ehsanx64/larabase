@@ -11,5 +11,5 @@ before_script:
   - php artisan key:generate
 #  - php artisan migrate
 
-script:
-  - vendor/bin/phpunit
+#script:
+#  - vendor/bin/phpunit
