@@ -4,6 +4,7 @@ matrix:
   fast_finish: true
   include:
     - php: "7.0"
+    - php: "7.2"
 
 # faster builds on new travis setup not using sudo
 sudo: false
