@@ -4,6 +4,7 @@ matrix:
   fast_finish: true
   include:
     - php: "7.0"
+    - php: "7.1"
     - php: "7.2"
 
 # faster builds on new travis setup not using sudo
@@ -33,10 +34,12 @@ install:
       # gmagick is not installed on travis currently
       #printf "\n" | pecl install gmagick
     fi
+
 # setup application:
-  - |
-    sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" config/web.php
-script:
+#  - |
+#    sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" config/web.php
+
+#script:
 #  - |
 #    php -S localhost:8080 -t web > /dev/null 2>&1 &
 # vendor/bin/codecept run
