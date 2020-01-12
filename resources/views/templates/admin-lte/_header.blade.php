@@ -1,15 +1,15 @@
 <!-- Logo -->
 <a href="{{ url('/admin') }}" class="logo">
 	<!-- mini logo for sidebar mini 50x50 pixels -->
-	<span class="logo-mini">پنل</span>
+	<span class="logo-mini">{{ __('Panel') }}</span>
 	<!-- logo for regular state and mobile devices -->
-	<span class="logo-lg"><b>کنترل پنل مدیریت</b></span>
+	<span class="logo-lg"><b>{{ __('Control Panel') }}</b></span>
 </a>
 <!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top">
 	<!-- Sidebar toggle button-->
 	<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-		<span class="sr-only">Toggle navigation</span>
+		<span class="sr-only">{{ __('Toggle navigation') }}</span>
 	</a>
 
 	<div class="navbar-custom-menu">
@@ -27,15 +27,14 @@
 
 						<p>
 							{{ Auth::user()->name }}
-							<small>مدیریت کل سایت</small>
+							<small>{{ __('Website Administrator') }}</small>
 						</p>
 					</li>
 					<!-- Menu Footer-->
 					<li class="user-footer">
 						<div class="pull-left">
-							<a href={{ route('logout') }}" onClick=" event.preventDefault();document.getElementById(
-							'logout-form').submit();" class="btn btn-default
-							btn-flat">خروج</a>
+							<a href={{ route('logout') }}" onClick="event.preventDefault();document.getElementById('logout-form').submit();" class="btn btn-default
+							btn-flat">{{ __('Logout') }}</a>
 
 							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 								{{ csrf_field() }}

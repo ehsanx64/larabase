@@ -4,6 +4,7 @@
   "Enter your password": "رمزعبور خود را وارد کنید",
   "Forgot Password?": "رمزعبور را فراموش کرده‌اید؟",
   "Login": "ورود",
+  "Logout": "خروج",
   "Create account": "ایجاد حساب کاربری",
   "Title": "عنوان",
   "Excerpt": "چکیده",
@@ -13,12 +14,14 @@
   "Posts": "پست‌ها",
   "New Post": "پست جدید",
   "Post List": "لیست پست‌ها",
-  "Title": "عنوان",
-  "Excerpt": "چکیده",
-  "Content": "محتوا",
-  "Publish Date": "تاریخ انتشار",
   "Save": "ذخیره",
   "Modules": "ماژول‌ها",
   "Loose": "غیرمستحکم",
+  "Control Panel": "پنل مدیریت",
+  "Panel": "پنل",
+  "Dashboard": "دشبورد",
+  "Toggle navigation": "نمایش راهبری",
+  "Website Administrator": "مدیر سایت",
+
   "Ending": "This is the ending item"
 }
