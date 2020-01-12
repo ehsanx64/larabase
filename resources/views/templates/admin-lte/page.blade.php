@@ -44,7 +44,6 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
 	<header class="main-header">
 		@include("$template/_header")
 	</header>
@@ -103,6 +102,7 @@
 		<!-- /.content -->
 	</div>
 	<!-- /.content-wrapper -->
+
 	<footer class="main-footer text-left">
 		<strong style="display: block; text-align: center;">کلیه حقوق متعلق به برند ساختمانیار
 			میباشد</strong>
