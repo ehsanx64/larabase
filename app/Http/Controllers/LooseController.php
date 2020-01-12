@@ -76,7 +76,7 @@ class LooseController extends Controller {
 	}
 
 	public function admin(Loose $loose) {
-		return $this->render('admin', ['title' => 'asdf']);
+		return $this->render('admin', ['title' => __('Loose')]);
 	}
 
 
