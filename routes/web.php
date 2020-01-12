@@ -30,5 +30,6 @@ defineModuleAdmin('loose');
 //]);
 
 Route::resource('posts', 'PostController');
+Route::get('/admin/posts', 'PostController@admin');
 
 Auth::routes();

@@ -91,7 +91,7 @@
 
 							</div>
 							<div class="box-body">
-								@yield('content')
+								@yield('page-content')
 							</div>
 						</div>
 					</div>

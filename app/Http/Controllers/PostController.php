@@ -36,4 +36,8 @@ class PostController extends Controller {
 		$post->update($request->all());
 		return redirect('posts');
 	}
+
+	public function admin(Post $post) {
+		return view('posts.admin', ['title' => 'Posts']);
+	}
 }
