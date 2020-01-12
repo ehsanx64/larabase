@@ -33,8 +33,7 @@
 					<!-- Menu Footer-->
 					<li class="user-footer">
 						<div class="pull-left">
-							<a href={{ route('logout') }}" onClick="event.preventDefault();document.getElementById('logout-form').submit();" class="btn btn-default
-							btn-flat">{{ __('Logout') }}</a>
+							<a href={{ route('logout') }}" onClick="event.preventDefault();document.getElementById('logout-form').submit();" class="btn btn-info btn-flat">{{ __('Logout') }}</a>
 
 							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 								{{ csrf_field() }}
