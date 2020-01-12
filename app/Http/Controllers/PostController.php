@@ -18,7 +18,7 @@ class PostController extends Controller {
 	}
 
 	public function create() {
-		return View('posts.create', ['title' => 'New Post']);
+		return View('posts.create', ['title' => __('New Post')]);
 	}
 
 	public function store(PostRequest $request) {
@@ -38,6 +38,6 @@ class PostController extends Controller {
 	}
 
 	public function admin(Post $post) {
-		return view('posts.admin', ['title' => 'Posts']);
+		return view('posts.admin', ['title' => __('Post List')]);
 	}
 }
