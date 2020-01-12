@@ -1,31 +1,23 @@
 {{ csrf_field() }}
 
-{!! TH::textField('title', '') !!}
-{!! TH::textArea('excerpt') !!}
-{!! TH::textArea('content') !!}
-{!! TH::textField('published_at', 'Publish Date') !!}
-{!! TH::submit() !!}
+<div class="form-group">
+	<label for="title">Title:</label>
+	<input type="text" class="form-control" name="title" />
+</div>
 
-{{--<div class="input-field col s12">--}}
-	{{--<input id="title" name="title" type="text" class="validate" value="{{ isset($post->title) ? $post->title : '' }}">--}}
-	{{--<label for="title">{{ __('Title') }}</label>--}}
-{{--</div>--}}
+<div class="form-group">
+	<label for="excerpt">Excerpt:</label>
+	<input type="text" class="form-control" name="excerpt" />
+</div>
 
-{{--<div class="input-field col s12">--}}
-	{{--<textarea id="excerpt" name="excerpt" class="materialize-textarea">{{ isset($post->excerpt) ? $post->excerpt : '' }}</textarea>--}}
-	{{--<label for="excerpt">{{ __('Excerpt') }}</label>--}}
-{{--</div>--}}
+<div class="form-group">
+	<label for="content">Content:</label>
+	<textarea class="form-control" name="content" id="" cols="30" rows="3"></textarea>
+</div>
 
-{{--<div class="input-field col s12">--}}
-	{{--<textarea id="content" name="content" class="materialize-textarea">{{ isset($post->content) ? $post->content : '' }}</textarea>--}}
-	{{--<label for="content">{{ __('Content') }}</label>--}}
-{{--</div>--}}
+<div class="form-group">
+	<label for="published_at">Publish Date:</label>
+	<input type="text" class="form-control" name="published_at" />
+</div>
 
-{{--<div class="input-field col s12">--}}
-	{{--<input id="published_at" name="published_at" type="text" class="validate" value="{{ isset($post->published_at) ? $post->published_at : '' }}">--}}
-	{{--<label for="published_at">{{ __('Publish Date') }}</label>--}}
-{{--</div>--}}
-
-{{--<div class="col s12">--}}
-	{{--<input type="submit" class="waves-effect waves-light btn" value="{{ __('Create') }}" />--}}
-{{--</div>--}}
+<input class="btn btn-primary" type="submit" value="Submit" />

@@ -33,7 +33,7 @@ function getModulePath($moduleName) {
  */
 function defineModuleAdmin($moduleName, $routeType = 'get') {
 	Route::$routeType(sprintf("/admin/%s", $moduleName),
-		sprintf("%s@admin", ucfirst($moduleName) . 'Controller'))->middleware('auth');
+		sprintf("%s@admin", ucfirst($moduleName) . 'Controller'));
 }
 
 function frontTpl($layout) {

@@ -1,6 +1,7 @@
 <?php
 namespace App\Module;
 
+use Illuminate\Support\Facades\URL;
 
 class App {
 	public $appTitle;
@@ -8,5 +9,4 @@ class App {
 	public function __construct() {
 		$this->appTitle = ENV('APP_TITLE');
 	}
-
 }

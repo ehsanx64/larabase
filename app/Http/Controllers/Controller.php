@@ -30,4 +30,8 @@ class Controller extends BaseController {
 			class_basename(app('request')->route()->controller)));
 		return view("$target.$viewfile", $data);
 	}
+
+	public function __construct() {
+		$this->middleware('auth')->only(['admin', 'create', 'store', 'edit', 'update', 'destroy']);
+	}
 }

@@ -2,15 +2,13 @@
 @section('page-content')
 	<div class="post-create">
 		<div class="row">
-			{!! TH::formBegin('PostController@store', "POST") !!}
-			@include('posts._form')
-			{!! TH::formEnd() !!}
+			<div class="col-xs-12">
+				<form action="{{ action('PostController@store') }}" method="POST">
+					@include('posts._form')
+				</form>
 
-			{{--<form action="{{ action('PostController@store') }}" method="post" class="{{ TH::$formClass }}">--}}
-				{{--@include('posts._form')--}}
-			{{--</form>--}}
-
-			@include('posts._errors')
+				@include('posts._errors')
+			</div>
 		</div>
 	</div>
 @endsection()
