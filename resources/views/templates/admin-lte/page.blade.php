@@ -59,55 +59,44 @@
 	<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
 		<section class="content-header">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-12">
-						<h2>
-							{{ $title }}
-							<small>{{{ $subTitle or '' }}}</small>
-						</h2>
-						<ol class="breadcrumb">
-							<li>
-								<a href="{{ url('/admin') }}">
-									<i class="fa fa-dashboard"></i>&nbsp;{{ __('Control Panel') }}</a>
-							</li>
-							<li class="active">
-								@if (isset($mainLink))
-									<a href="{{ $mainLink }}">{{ $title }}</a>
-								@else
-									{{ $title }}
-								@endif
-							</li>
-							@if (isset($subTitle))
-								<li>{{ $subTitle }}</li>
-							@endif
-						</ol>
-
-					</div>
-
-				</div>
-			</div>
-
+			<h1>
+				{{ $title }}
+				<small>{{{ $subTitle or '' }}}</small>
+			</h1>
+			<ol class="breadcrumb">
+				<li>
+					<a href="{{ url('/admin') }}">
+						<i class="fa fa-dashboard"></i>&nbsp;{{ __('Control Panel') }}</a>
+				</li>
+				<li class="active">
+					@if (isset($mainLink))
+						<a href="{{ $mainLink }}">{{ $title }}</a>
+					@else
+						{{ $title }}
+					@endif
+				</li>
+				@if (isset($subTitle))
+					<li>{{ $subTitle }}</li>
+				@endif
+			</ol>
 		</section>
 
 		<!-- Main content -->
 		<section class="content">
-			<div class="container-fluid">
-				<!-- Main row -->
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="box">
-							<div class="box-header">
+			<!-- Main row -->
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="box">
+						<div class="box-header">
 
-							</div>
-							<div class="box-body">
-								@yield('page-content')
-							</div>
+						</div>
+						<div class="box-body">
+							@yield('page-content')
 						</div>
 					</div>
 				</div>
-				<!-- /.row (main row) -->
 			</div>
+			<!-- /.row (main row) -->
 		</section>
 		<!-- /.content -->
 	</div>
