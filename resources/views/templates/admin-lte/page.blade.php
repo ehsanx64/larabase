@@ -104,7 +104,7 @@
 	<!-- /.content-wrapper -->
 
 	<footer class="main-footer text-left">
-		<strong style="display: block; text-align: center;">کلیه حقوق متعلق به برند ساختمانیار
+		<strong style="display: block; text-align: center;">کلیه حقوق متعلق به <a href="https://ehsanm.net" target="_blank" style="cursor: pointer;">احسان محمّدی</a>
 			میباشد</strong>
 	</footer>
 
