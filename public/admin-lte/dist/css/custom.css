@@ -1,0 +1,35 @@
+.gridview-action-buttons {
+    min-width: 120px;
+}
+.gridview-action-buttons a {
+    margin-right: 4px;
+}
+
+.horizontal-scrollable {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.profile-user-img {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 10px;
+}
+
+.form-horizontal .control-label {
+    text-align: right;
+}
+
+.user-panel > .info > p {
+    margin-top: 9px;
+    margin-right: 9px;
+}
+
+.dataTables_filter {
+    visibility: hidden;
+}
+
+#main-modal .separator {
+    margin: 10px 0 10px 0;
+    border-bottom: 2px solid #fbfbfb;
+}
