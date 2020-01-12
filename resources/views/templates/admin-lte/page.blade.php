@@ -60,7 +60,7 @@
 		<!-- Content Header (Page header) -->
 		<section class="content-header">
 			<h1>
-				{{ $page_title }}
+				{{ $title }}
 				<small>{{{ $subTitle or '' }}}</small>
 			</h1>
 			<ol class="breadcrumb">
@@ -69,9 +69,9 @@
 				</li>
 				<li class="active">
 					@if (isset($mainLink))
-						<a href="{{ $mainLink }}">{{ $page_title }}</a>
+						<a href="{{ $mainLink }}">{{ $title }}</a>
 					@else
-						{{ $page_title }}
+						{{ $title }}
 					@endif
 				</li>
 				@if (isset($subTitle))
