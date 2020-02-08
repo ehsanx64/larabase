@@ -49,8 +49,14 @@
 	</div>
 	<div class="footer-copyright">
 		<div class="container">
-			Made by
-			<a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			@if ($page_language === 'fa')
+				این قالب بر اساس فریم‌ورک
+				<a class="brown-text text-lighten-3" href="http://materializecss.com">متریالایز</a>
+				پیاده‌سازی شده است.
+			@else
+                Based on
+				<a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			@endif
 		</div>
 	</div>
 </footer>
