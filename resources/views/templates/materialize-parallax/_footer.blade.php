@@ -2,10 +2,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col l6 s12">
-				<h5 class="white-text">Company Bio</h5>
-				<p class="grey-text text-lighten-4">We are a team of college students working on
-					this project like it's our full time job. Any amount would help support and
-					continue development on this project and is greatly appreciated.</p>
+				@if ($page_language == 'fa')
+					<h5 class="white-text">درباره لارابیس</h5>
+					<p class="grey-text text-lighten-4">لارابیس یک چارچوب برای انتشار محتوا، پیاده‌سازی وب سرویس و توسعه اپلیکیشن تحت وب با استفاده از فریم‌ورک لاراول است.</p>
+				@else
+					<h5 class="white-text">About Larabase</h5>
+					<p class="grey-text text-lighten-4">Larabase is a platform for content publishing, web service implementation and web application development using the Laravel framework.</p>
+				@endif
 
 			</div>
 			<div class="col l3 s12">
