@@ -9,7 +9,7 @@
         "doctrine/dbal": "^2.10",
         "ehsanx64/phplib": "^2.0",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "5.6.*",
+        "laravel/framework": "5.7.*",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {
