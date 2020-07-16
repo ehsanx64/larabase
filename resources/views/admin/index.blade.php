@@ -1,6 +1,6 @@
 @extends($template . '/page')
 
 @section('page-content')
-<h1>Target: adminindex</h1>
+<div id="admin-dashboard-main"></div>
 @endsection()
 
